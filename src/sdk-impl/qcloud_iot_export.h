@@ -24,7 +24,7 @@ extern "C" {
 #define QCLOUD_IOT_DEVICE_SDK_APPID                                	"21010406"
 
 /* MQTT心跳消息发送周期, 单位:ms */
-#define QCLOUD_IOT_MQTT_KEEP_ALIVE_INTERNAL                         (240 * 1000)
+#define QCLOUD_IOT_MQTT_KEEP_ALIVE_INTERNAL                         (5 * 1000)
 
 /* MQTT 阻塞调用(包括连接, 订阅, 发布等)的超时时间, 单位:ms 建议5000ms */
 #define QCLOUD_IOT_MQTT_COMMAND_TIMEOUT                             (5 * 1000)
@@ -36,16 +36,16 @@ extern "C" {
 #define MAX_SIZE_OF_CLIENT_ID                                       (80)
 
 /* 产品名称的最大长度 */
-#define MAX_SIZE_OF_PRODUCT_ID                                    	(10)
+#define MAX_SIZE_OF_PRODUCT_ID                                    	(64)
 
 /* 设备ID的最大长度 */
 #define MAX_SIZE_OF_DEVICE_NAME                                     (64)
 
 /* MQTT消息发送buffer大小, 支持最大256*1024 */
-#define QCLOUD_IOT_MQTT_TX_BUF_LEN                                  (512)
+#define QCLOUD_IOT_MQTT_TX_BUF_LEN                                  (1024*16)
 
 /* MQTT消息接收buffer大小, 支持最大256*1024 */
-#define QCLOUD_IOT_MQTT_RX_BUF_LEN                                  (512)
+#define QCLOUD_IOT_MQTT_RX_BUF_LEN                                  (1024*16)
 
 /* COAP 发送消息buffer大小，最大支持64*1024字节 */
 #define COAP_SENDMSG_MAX_BUFLEN                   					(512)
